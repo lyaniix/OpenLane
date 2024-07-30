@@ -26,7 +26,7 @@ Let us clarify here, before delving into details, that with each hierarchy level
 The first decision to make at the core level is the core ring. So first, you need to know how many power domains do you need to use, and so how many core rings do you require. This can be easily set by the following configurations:
 
 <table>
-<tr><th>JSON</th><th>Tcl</th></tr>
+<tr><th>JSON</th><tr>
 <tr>
 <td>
     
@@ -38,8 +38,12 @@ The first decision to make at the core level is the core ring. So first, you nee
     "SYNTH_USE_PG_PINS_DEFINES": "USE_POWER_PINS"
 
 ```
+</td>
+</tr>
+</table>
 
-
+<table>
+<tr><th>Tcl</th></tr>
 </td>
 <td>
 
