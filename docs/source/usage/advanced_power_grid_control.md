@@ -26,7 +26,7 @@ Let us clarify here, before delving into details, that with each hierarchy level
 The first decision to make at the core level is the core ring. So first, you need to know how many power domains do you need to use, and so how many core rings do you require. This can be easily set by the following configurations:
 
 <table>
-<tr><th>JSON</th></tr>
+<tr><th>JSON</th><th>Tcl</th></tr>
 <tr>
 <td>
     
@@ -36,10 +36,11 @@ The first decision to make at the core level is the core ring. So first, you nee
     "VDD_NETS": "vccd1 vccd2 vdda1 cdda2",
     "GND_NETS": "vssd1 vssd2 vssa1 vssa2",
     "SYNTH_USE_PG_PINS_DEFINES": "USE_POWER_PINS"
-</td> </tr> </table> ```
-<table>
-<tr><th>Tcl</th></tr>
-<tr>
+
+```
+
+
+</td>
 <td>
 
 ```tcl
@@ -48,7 +49,12 @@ set ::env(FP_PDN_CORE_RING) 1
 set ::env(VDD_NETS) [list {vccd1} {vccd2} {vdda1} {vdda2}]
 set ::env(GND_NETS) [list {vssd1} {vssd2} {vssa1} {vssa2}]
 set ::env(SYNTH_USE_PG_PINS_DEFINES) "USE_POWER_PINS"
-</td> </tr> </table> ```
+```
+
+</td>
+</tr>
+</table>
+
 
 Here we are requiring 4 power domains. For each `VDD_NETS` there is a corresponding `GND_NETS`. Those net names must also exist in the RTL and must be connected to each hard macro inside your core explicitly in the RTL, and those must be guarded with the value given to `SYNTH_USE_PG_PINS_DEFINES`. If the internal modules are going to be flattened, then there is no need to reflect this connection in the RTL for those modules that will be flattened with the core module. For the example above, Here is the required RTL reflection:
 
