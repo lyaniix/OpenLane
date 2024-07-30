@@ -26,7 +26,7 @@ Let us clarify here, before delving into details, that with each hierarchy level
 The first decision to make at the core level is the core ring. So first, you need to know how many power domains do you need to use, and so how many core rings do you require. This can be easily set by the following configurations:
 
 <table>
-<tr><th>JSON</th><tr>
+<tr><th>JSON</th></tr>
 <tr>
 <td>
     
@@ -42,9 +42,10 @@ The first decision to make at the core level is the core ring. So first, you nee
 </tr>
 </table>
 
+
 <table>
 <tr><th>Tcl</th></tr>
-</td>
+<tr>
 <td>
 
 ```tcl
@@ -94,7 +95,7 @@ Note that net and pin names must be matching.
 By simply adding these you should now have 8 core rings, 4 for power and 4 for ground. To control the spacing and the power grid for these by changing the following:
 
 <table>
-<tr><th>JSON</th><th>Tcl</th></tr>
+<tr><th>JSON</th></tr>
 <tr>
 <td>
     
@@ -109,6 +110,13 @@ By simply adding these you should now have 8 core rings, 4 for power and 4 for g
 
 
 </td>
+</tr>
+</table>
+
+
+<table>
+</tr><th>Tcl</th></tr>
+<tr>
 <td>
 
 ```tcl
