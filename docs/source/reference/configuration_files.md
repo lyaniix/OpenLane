@@ -39,7 +39,8 @@ project/
 You can also initialize a `config.tcl` file instead:
 
 ```bash
-<openlane-root>/flow.tcl -design SuccessiveApproximationRegister -init_design_config -src "src/*.v" -config_file config.tcl
+<openlane-root>/flow.tcl -design SuccessiveApproximationRegister -init_design_config \
+		-src "src/*.v" -config_file config.tcl
 ```
 
 You can then run the designs by moving into the directory `openlane/SuccessiveApproximationRegister` and running `flow.tcl`:
@@ -232,7 +233,8 @@ To run the script to create new (empty) configurations for a (PDK,STD_CELL_LIBRA
 
 To run the script to replicate configurations from one (PDK,STD_CELL_LIBRARY) pair to another:
 ```bash
-    python3 ./scripts/config/replicate.py --from-pdk PDK_FROM --from-std-cell-lib STD_CELL_LIBRARY_FROM --to-pdk PDK --to-std-cell-lib STD_CELL_LIBRARY
+    python3 ./scripts/config/replicate.py --from-pdk PDK_FROM --from-std-cell-lib \
+	STD_CELL_LIBRARY_FROM --to-pdk PDK --to-std-cell-lib STD_CELL_LIBRARY
 ```
 
 For more detailed information, run `python3 ./scripts/config/replicate.py --help`.
@@ -241,7 +243,8 @@ For more detailed information, run `python3 ./scripts/config/replicate.py --help
 
 To run the script to update configurations for a (PDK,STD_CELL_LIBRARY) pair after an exploration:
 ```bash
-    python3 ./scripts/config/update.py --pdk PDK --std-cell-lib STD_CELL_LIBRARY --best_results SW_exploration_best.csv
+    python3 ./scripts/config/update.py --pdk PDK --std-cell-lib STD_CELL_LIBRARY \
+	--best_results SW_exploration_best.csv
 ```
 
 You can invoke `python3 ./scripts/config/update.py` for a full list of options.
