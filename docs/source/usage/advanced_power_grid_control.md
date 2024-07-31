@@ -120,12 +120,18 @@ By simply adding these you should now have 8 core rings, 4 for power and 4 for g
 <td>
 
 ```tcl
-set ::env(FP_PDN_CORE_RING_VWIDTH) 3 # The vertical sides width of the core rings
-set ::env(FP_PDN_CORE_RING_HWIDTH) $::env(FP_PDN_CORE_RING_VWIDTH) # The horizontal sides width of the core rings
-set ::env(FP_PDN_CORE_RING_VOFFSET) 14 # The vertical sides offset from the design boundaries for the core rings
-set ::env(FP_PDN_CORE_RING_HOFFSET) $::env(FP_PDN_CORE_RING_VOFFSET) # The horizontal sides offset from the design boundaries for the core rings
-set ::env(FP_PDN_CORE_RING_VSPACING) 1.7 # The vertical spacing between the core ring straps
-set ::env(FP_PDN_CORE_RING_HSPACING) $::env(FP_PDN_CORE_RING_VSPACING) # The horizontal spacing between the core ring straps
+set ::env(FP_PDN_CORE_RING_VWIDTH) 3
+# The vertical sides width of the core rings
+set ::env(FP_PDN_CORE_RING_HWIDTH) $::env(FP_PDN_CORE_RING_VWIDTH)
+# The horizontal sides width of the core rings
+set ::env(FP_PDN_CORE_RING_VOFFSET) 14
+# The vertical sides offset from the design boundaries for the core rings
+set ::env(FP_PDN_CORE_RING_HOFFSET) $::env(FP_PDN_CORE_RING_VOFFSET)
+# The horizontal sides offset from the design boundaries for the core rings
+set ::env(FP_PDN_CORE_RING_VSPACING) 1.7
+# The vertical spacing between the core ring straps
+set ::env(FP_PDN_CORE_RING_HSPACING) $::env(FP_PDN_CORE_RING_VSPACING)
+# The horizontal spacing between the core ring straps
 ```
 
 </td>
@@ -137,7 +143,7 @@ set ::env(FP_PDN_CORE_RING_HSPACING) $::env(FP_PDN_CORE_RING_VSPACING) # The hor
 The next values should be added as-is to control the starting point for looping over the core rings and recalculating the new offset for each core ring:
 
 <table>
-<tr><th>JSON</th><th>Tcl</th></tr>
+<tr><th>JSON</th></tr>
 <tr>
 <td>
     
@@ -148,8 +154,14 @@ The next values should be added as-is to control the starting point for looping 
 
 
 </td>
-<td>
+</tr>
+</table>
 
+<table>
+<tr><th>Tcl</th></tr>
+<tr>
+<td>
+	
 ```tcl
 set ::env(FP_PDN_VSPACING) [expr 5*$::env(FP_PDN_CORE_RING_VWIDTH)]
 set ::env(FP_PDN_HSPACING) [expr 5*$::env(FP_PDN_CORE_RING_HWIDTH)]
@@ -163,7 +175,7 @@ set ::env(FP_PDN_HSPACING) [expr 5*$::env(FP_PDN_CORE_RING_HWIDTH)]
 The next step is to control the internal power grid by changing the following variables:
 
 <table>
-<tr><th>JSON</th><th>Tcl</th></tr>
+<tr><th>JSON</th></tr>
 <tr>
 <td>
     
@@ -177,8 +189,13 @@ The next step is to control the internal power grid by changing the following va
 
 ```
 
-
 </td>
+</tr>
+</table>
+
+<table>
+<tr><th>Tcl</th></tr>
+<tr>
 <td>
 
 ```tcl
