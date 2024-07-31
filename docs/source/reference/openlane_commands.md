@@ -108,7 +108,7 @@ Most of the following commands' implementation exists in this [file][9]
 | Command      | Flags                   | Description                                           |
 |---------------|------------------------|-----------------------------------------|
 | `run_yosys` | | Runs yosys synthesis on the design processed in the flow (the design is set by the `prep` command). |
-|    | `[-output <output_file>]` | Sets the outputfile from yosys synthesis. <br> Defaults to `/<run_path>/results/synthesis/<design_name>.synthesis.v`  <br> Optional flag.       |
+|    | `[-output <output_file>]` | Sets the outputfile from yosys synthesis. <br> Defaults to `/<run_path>/results/synthesis /<design_name>.synthesis.v`  <br> Optional flag.       |
 | `run_synthesis` | | Runs yosys synthesis on the current design as well as OpenSTA timing analysis on the generated netlist. The logs are produced under `/<run_path>/logs/synthesis/`, the timing reports are under `/<run_path>/reports/synthesis/`, and the synthesized netlist under `/<run_path>/results/synthesis/`. |
 | `run_synth_exploration` | | Runs synthesis exploration, which will try out the available synthesis strategies against the input design. The output will be the four possible gate level netlists under `<run_path>/results/synthesis` and a summary report under `<run_path>/reports` that compares the 4 outputs. |
 | `verilog_elaborate <optional args>` | | Runs on structural verilog (top-level netlists) and elaborates it. The `<optional args>` are used to control what is passed to `run_yosys` |
@@ -210,8 +210,8 @@ Most of the following commands' implementation exists in this [file][8]
 |    | `[-odb <odb_file>]` | The input ODB file. <br> Defaults to `CURRENT_ODB`. |
 |    | `[-power <power_pin>]` | The name of the power pin. <br> Defaults to `VDD_PIN` |
 |    | `[-ground <ground_pin>]` | The name of the ground pin. <br> Defaults to `GND_PIN` |
-|    | `[-output_def <output_def_file>]` | The output DEF file path. <br> Defaults to `<run_path>/tmp/routing/$::env(DESIGN_NAME).power_routed.def` |
-|    | `[-output_odb <output_odb_file>]` | The output ODB file path. <br> Defaults to `<run_path>/tmp/routing/$::env(DESIGN_NAME).power_routed.odb` |
+|    | `[-output_def <output_def_file>]` | The output DEF file path. <br> Defaults to `<run_path>/tmp/routing/ $::env(DESIGN_NAME).power_routed.def` |
+|    | `[-output_odb <output_odb_file>]` | The output ODB file path. <br> Defaults to `<run_path>/tmp/routing/ $::env(DESIGN_NAME).power_routed.odb` |
 | `run_power_grid_generation` | | Runs power grid generation with the advanced control options, `VDD_NETS`, `GND_NETS`, etc... This proc is capable of generating multiple power grid. Check [this documentation][16] for more details about controlling this command.
 
 ## Routing Commands
