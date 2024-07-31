@@ -497,16 +497,16 @@ Copy the original `regfile_2r1w` as `regfile_2r1w_design_not_core`. Change `FP_P
 
 ```
 {
-    "DESIGN_NAME": "regfile_2r1w",
-    "VERILOG_FILES": "dir::src/*.v",
-    "CLOCK_PORT": "clk",
-    "CLOCK_PERIOD": 10.0,
-    "FP_PDN_MULTILAYER": false,
+   "DESIGN_NAME": "regfile_2r1w",
+   "VERILOG_FILES": "dir::src/*.v",
+   "CLOCK_PORT": "clk",
+   "CLOCK_PERIOD": 10.0,
+   "FP_PDN_MULTILAYER": false,
 
-    "FP_ASPECT_RATIO": 2,
-    "EXTRA_LEFS":      "/openlane/designs/ci/mem_1r1w/runs/full_guide/results/final/lef/mem_1r1w.lef",
-    "EXTRA_GDS_FILES": "/openlane/designs/ci/mem_1r1w/runs/full_guide/results/final/gds/mem_1r1w.gds",
-    "VERILOG_FILES_BLACKBOX": "dir::bb/*.v"
+   "FP_ASPECT_RATIO": 2,
+   "EXTRA_LEFS":      "/openlane/designs/ci/mem_1r1w/runs/full_guide/results/final/lef/mem_1r1w.lef",
+   "EXTRA_GDS_FILES": "/openlane/designs/ci/mem_1r1w/runs/full_guide/results/final/gds/mem_1r1w.gds",
+   "VERILOG_FILES_BLACKBOX": "dir::bb/*.v"
 }
 ```
 
@@ -520,18 +520,23 @@ The following error is expected:
 
 ```
 [STEP 39]
-[INFO]: Running Magic Spice Export from LEF (log: designs/ci/regfile_2r1w_design_not_core/runs/full_guide/logs/signoff/39-spice.log)...
+[INFO]: Running Magic Spice Export from LEF (log: designs/ci/regfile_2r1w_design_not_core/runs
+        /full_guide/logs/signoff/39-spice.log)...
 [STEP 40]
 [INFO]: Writing Powered Verilog (log: ../dev/null)...
 [STEP 41]
 [INFO]: Writing Verilog...
 [STEP 42]
 [INFO]: Running LEF LVS...
-[ERROR]: There are LVS errors in the design: See 'designs/ci/regfile_2r1w_design_not_core/runs/full_guide/logs/signoff/42-regfile_2r1w.lvs.lef.log' for details.
-[INFO]: Saving current set of views in 'designs/ci/regfile_2r1w_design_not_core/runs/full_guide/results/final'...
+[ERROR]: There are LVS errors in the design: See 'designs/ci/regfile_2r1w_design_not_core/runs
+        /full_guide/logs/signoff/42-regfile_2r1w.lvs.lef.log' for details.
+[INFO]: Saving current set of views in 'designs/ci/regfile_2r1w_design_not_core/runs
+        /full_guide/results/final'...
 [INFO]: Generating final set of reports...
-[INFO]: Created manufacturability report at 'designs/ci/regfile_2r1w_design_not_core/runs/full_guide/reports/manufacturability.rpt'.
-[INFO]: Created metrics report at 'designs/ci/regfile_2r1w_design_not_core/runs/full_guide/reports/metrics.csv'.
+[INFO]: Created manufacturability report at 'designs/ci/regfile_2r1w_design_not_core/runs
+        /full_guide/reports/manufacturability.rpt'.
+[INFO]: Created metrics report at 'designs/ci/regfile_2r1w_design_not_core/runs
+        /full_guide/reports/metrics.csv'.
 [INFO]: Saving runtime environment...
 [ERROR]: Flow failed.
 
