@@ -147,7 +147,8 @@ Configuration error:
 There is a programmable error in your configuration file:
 
 Traceback (most recent call last):
-File "/home/armleo/.local/lib/python3.10/site-packages/sphinx/config.py", line 343, in eval_config_file
+File "/home/armleo/.local/lib/python3.10/site-packages/sphinx/config.py",
+        line 343, in eval_config_file
     exec(code, namespace)
 File "/home/armleo/Desktop/OpenLaneGSOC/conf.py", line 24, in <module>
     from recommonmark.parser import CommonMarkParser
